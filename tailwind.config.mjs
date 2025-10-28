@@ -6,18 +6,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        petrol: '#0F5257',
-        sand: '#F2E9E4',
-        marine: '#1E3D58',
-        slate: '#2A3A4A',
-        ocean: '#10828C'
+        primary: '#1F5B87',
+        accent: '#F6C343',
+        background: '#F8F4EE',
+        text: '#3A3A3A',
+        seagreen: '#3C8D7C',
+        // Legacy color aliases for backward compatibility
+        petrol: '#1F5B87',
+        sand: '#F8F4EE',
+        marine: '#1F5B87',
+        slate: '#3A3A3A',
+        ocean: '#3C8D7C'
       },
       fontFamily: {
         sans: ['"Work Sans"', ...fontFamily.sans],
         display: ['"DM Serif Display"', ...fontFamily.serif]
       },
       boxShadow: {
-        card: '0 20px 50px -25px rgba(15, 82, 87, 0.35)'
+        card: '0 20px 50px -25px rgba(31, 91, 135, 0.35)'
       }
     }
   },

@@ -1,11 +1,98 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import WhatWhy from '../components/WhatWhy.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const meta = {
+  title: 'Ruhestarter – Transparente Altersvorsorge mit System',
+  description:
+    'Ruhestarter bringt Ordnung in Ihre Altersvorsorge: digitale Übersicht, verständliche Analysen und unabhängige Beratung für Ihren gelassenen Ruhestand.'
+};
+
+const milestones = [
+  {
+    title: 'Analyse & Klarheit',
+    description:
+      'Wir sammeln alle relevanten Daten, bewerten bestehende Verträge und zeigen, wo Handlungsbedarf besteht.',
+    status: 'Live in Q1 2025'
+  },
+  {
+    title: 'Digitale Steuerung',
+    description:
+      'Mit dem Ruhestands-Dashboard behalten Sie Szenarien, Renditen und Liquiditätsflüsse jederzeit im Blick.',
+    status: 'Beta in Q2 2025'
+  },
+  {
+    title: 'Beratung mit Herz',
+    description:
+      'Sie wählen aus geprüften Expert:innen, die auf Honorarbasis begleiten – unabhängig, transparent, empathisch.',
+    status: 'Netzwerkaufbau 2025'
+  }
+];
 ---
+<BaseLayout {...meta}>
+  <Hero />
 
-<Layout>
-	<Welcome />
-</Layout>
+  <WhatWhy />
+
+  <section class="section gap-12">
+    <header class="section-header">
+      <h2 class="section-title">Wie Ruhestarter Sie begleitet</h2>
+      <p class="section-subtitle">
+        Vom ersten Überblick bis zur laufenden Optimierung: Wir kombinieren moderne Technologie mit menschlicher Beratungskompetenz.
+      </p>
+    </header>
+    <div class="grid gap-6 lg:grid-cols-3">
+      {milestones.map((step) => (
+        <article class="flex h-full flex-col justify-between gap-6 rounded-3xl border border-petrol/10 bg-white/80 p-8 shadow-card backdrop-blur">
+          <div class="flex flex-col gap-4">
+            <h3 class="text-xl font-semibold text-marine">{step.title}</h3>
+            <p class="text-base text-slate/80">{step.description}</p>
+          </div>
+          <span class="inline-flex items-center justify-center rounded-full bg-petrol/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-petrol">
+            {step.status}
+          </span>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section gap-12">
+    <header class="section-header">
+      <h2 class="section-title">Für wen wir entwickeln</h2>
+      <p class="section-subtitle">
+        Ruhestarter unterstützt Menschen, die Verantwortung für ihre Zukunft übernehmen wollen – egal ob privat oder professionell.
+      </p>
+    </header>
+    <div class="grid gap-6 lg:grid-cols-2">
+      <article class="flex flex-col gap-4 rounded-3xl border border-petrol/10 bg-white/80 p-8 shadow-card backdrop-blur">
+        <h3 class="text-xl font-semibold text-marine">Privatpersonen mit Gestaltungswillen</h3>
+        <p class="text-base text-slate/80">
+          Sie möchten verstehen, wie Ihre Vorsorge heute steht, welche Optionen morgen möglich sind und wie Sie finanzielle Freiheit erreichen.
+        </p>
+        <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-slate/80">
+          <li>Intuitives Dashboard mit verständlichen KPIs</li>
+          <li>Planung realistischer Ruhestands-Szenarien</li>
+          <li>Hinweise auf Lücken und Optimierungspotenziale</li>
+        </ul>
+      </article>
+      <article class="flex flex-col gap-4 rounded-3xl border border-petrol/10 bg-white/80 p-8 shadow-card backdrop-blur">
+        <h3 class="text-xl font-semibold text-marine">Berater:innen & Ruhestands-Profis</h3>
+        <p class="text-base text-slate/80">
+          Unter der Marke „Ruhestands-Kompass“ schaffen wir eine Plattform, die professionelle Betreuung effizienter macht und Mandant:innen begeistert.
+        </p>
+        <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-slate/80">
+          <li>Transparente Dokumentation und sichere Zusammenarbeit</li>
+          <li>Digitale Tools für Workshops und Beratungsprozesse</li>
+          <li>Gemeinsames Qualitätsversprechen für faire Altersvorsorge</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <NewsletterForm />
+
+  <SiteFooter slot="footer" />
+</BaseLayout>

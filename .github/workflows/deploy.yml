@@ -1,0 +1,51 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build static site and deploy to Hetzner
+    runs-on: ubuntu-latest
+
+    env:
+      HETZNER_HOST: ${{ secrets.HETZNER_HOST }}
+      HETZNER_USER: ${{ secrets.HETZNER_USER }}
+      HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
+      HETZNER_TARGET: ${{ secrets.HETZNER_TARGET }}
+      HETZNER_SSH_KEY: ${{ secrets.HETZNER_SSH_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        run: pnpm build
+
+      - name: Deploy to Hetzner
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ env.HETZNER_HOST }}
+          username: ${{ env.HETZNER_USER }}
+          port: ${{ env.HETZNER_PORT }}
+          key: ${{ env.HETZNER_SSH_KEY }}
+          source: "dist/*"
+          target: ${{ env.HETZNER_TARGET }}
+          strip_components: 1

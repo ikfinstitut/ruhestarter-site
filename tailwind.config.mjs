@@ -12,6 +12,7 @@ export default {
         text: '#3A3A3A',
         seagreen: '#3C8D7C',
         // Legacy color aliases for backward compatibility
+        // Both petrol and marine map to primary as they were used interchangeably for brand blue
         petrol: '#1F5B87',
         sand: '#F8F4EE',
         marine: '#1F5B87',

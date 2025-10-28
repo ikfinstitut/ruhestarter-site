@@ -16,7 +16,7 @@ jobs:
       HETZNER_USER: ${{ secrets.HETZNER_USER }}
       HETZNER_PORT: ${{ secrets.HETZNER_PORT }}
       HETZNER_TARGET: ${{ secrets.HETZNER_TARGET }}
-      HETZNER_SSH_KEY: ${{ secrets.HETZNER_SSH_KEY }}
+      HETZNER_SSH_PASSWORD: ${{ secrets.HETZNER_SSH_PASSWORT }}
 
     steps:
       - name: Checkout repository

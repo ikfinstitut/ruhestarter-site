@@ -27,24 +27,30 @@ export default {
     themes: [
       {
         ruhestarter: {
-          'primary': '#1F5B87',        // Kompass-Blau
-          'primary-content': '#FFFFFF', // White text on primary buttons
-          'secondary': '#F6C343',      // Ruhestarter-Gelb
-          'secondary-content': '#3A3A3A', // Dark text on secondary buttons
-          'accent': '#3C8D7C',         // Seegrün
-          'accent-content': '#FFFFFF', // White text on accent
-          'neutral': '#3A3A3A',        // Graphit-Grau
-          'neutral-content': '#FFFFFF', // White text on neutral
-          'base-100': '#F8F4EE',       // Sand-Beige
-          'base-200': '#FFFFFF',       // White
-          'base-300': '#E8E4DE',       // Slightly darker sand
-          'base-content': '#3A3A3A',   // Text color on base
-          'info': '#1F5B87',
-          'success': '#3C8D7C',
-          'warning': '#F6C343',
-          'error': '#EF4444',
+          'primary': 'oklch(0.45 0.12 247)',        // #1F5B87 Kompass-Blau in OKLCH
+          'primary-content': 'oklch(1 0 0)',        // White text on primary buttons
+          'secondary': 'oklch(0.80 0.14 85)',       // #F6C343 Ruhestarter-Gelb in OKLCH
+          'secondary-content': 'oklch(0.30 0.05 247)', // Dark text on secondary buttons
+          'accent': 'oklch(0.58 0.12 175)',         // #3C8D7C Seegrün in OKLCH
+          'accent-content': 'oklch(1 0 0)',         // White text on accent
+          'neutral': 'oklch(0.30 0.01 285)',        // #3A3A3A Graphit-Grau in OKLCH
+          'neutral-content': 'oklch(1 0 0)',        // White text on neutral
+          'base-100': 'oklch(0.96 0.01 75)',        // #F8F4EE Sand-Beige in OKLCH
+          'base-200': 'oklch(1 0 0)',               // White
+          'base-300': 'oklch(0.93 0.01 75)',        // #E8E4DE Slightly darker sand
+          'base-content': 'oklch(0.30 0.01 285)',   // #3A3A3A Text color on base
+          'info': 'oklch(0.45 0.12 247)',
+          'info-content': 'oklch(1 0 0)',
+          'success': 'oklch(0.58 0.12 175)',
+          'success-content': 'oklch(1 0 0)',
+          'warning': 'oklch(0.80 0.14 85)',
+          'warning-content': 'oklch(0.30 0.05 247)',
+          'error': 'oklch(0.63 0.25 25)',
+          'error-content': 'oklch(1 0 0)',
         },
       },
     ],
+    styled: true,
+    base: true,
   },
 };

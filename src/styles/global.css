@@ -5,39 +5,3 @@
 :root {
   color-scheme: light;
 }
-
-body {
-  @apply bg-sand text-slate font-sans antialiased;
-}
-
-a {
-  @apply text-ocean underline-offset-4 transition-colors duration-200;
-}
-
-a:hover {
-  @apply text-petrol;
-}
-
-.btn-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-petrol px-8 py-3 text-base font-semibold text-white shadow-lg shadow-petrol/30 transition hover:bg-ocean focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ocean;
-}
-
-.btn-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-petrol px-6 py-3 text-base font-semibold text-petrol transition hover:border-ocean hover:text-ocean focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ocean;
-}
-
-.section {
-  @apply mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-16 sm:px-10 lg:px-0;
-}
-
-.section-header {
-  @apply flex flex-col gap-4 text-center;
-}
-
-.section-title {
-  @apply text-3xl font-display text-marine sm:text-4xl;
-}
-
-.section-subtitle {
-  @apply text-lg text-slate/80 sm:text-xl;
-}

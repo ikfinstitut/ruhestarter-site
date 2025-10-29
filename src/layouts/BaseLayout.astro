@@ -8,7 +8,7 @@ const {
 } = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="de" class="bg-sand">
+<html lang="de" class="bg-base-100" data-theme="ruhestarter">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,8 +34,8 @@ const {
     
     <script defer src="https://cloud.umami.is/script.js" data-website-id="fa75682f-c77d-4616-a512-5bf4d61266df"></script>
   </head>
-  <body>
-    <div class="min-h-screen bg-gradient-to-b from-white via-sand to-sand">
+  <body class="bg-base-100 text-neutral font-sans antialiased">
+    <div class="min-h-screen bg-gradient-to-b from-base-200 via-base-100 to-base-100">
       <main class="flex min-h-screen flex-col">
         <slot />
       </main>

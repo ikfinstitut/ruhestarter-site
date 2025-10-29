@@ -9,10 +9,10 @@ const {
   description = 'Erhalten Sie Einladungen zur Beta, Experten-Insights und Updates zum Launch der Ruhestarter Plattform.'
 } = Astro.props;
 ---
-<section id="newsletter" class="section items-center gap-10 rounded-[3rem] border border-petrol/10 bg-white/80 shadow-card backdrop-blur">
-  <header class="section-header">
-    <h2 class="section-title">{headline}</h2>
-    <p class="section-subtitle">{description}</p>
+<section id="newsletter" class="container mx-auto flex w-full max-w-6xl flex-col items-center gap-10 rounded-[3rem] border border-primary/10 bg-base-200/80 px-6 py-16 shadow-card backdrop-blur sm:px-10 lg:px-0">
+  <header class="flex flex-col gap-4 text-center">
+    <h2 class="text-3xl font-display text-primary sm:text-4xl">{headline}</h2>
+    <p class="text-lg text-neutral/80 sm:text-xl">{description}</p>
   </header>
   <form
     class="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center"
@@ -21,18 +21,18 @@ const {
   >
     <label class="sr-only" for="email">E-Mail-Adresse</label>
     <input
-      class="w-full max-w-md rounded-full border border-petrol/30 bg-white px-6 py-3 text-base text-slate shadow-inner focus:border-ocean focus:outline-none focus:ring-2 focus:ring-ocean/40"
+      class="input input-bordered input-primary w-full max-w-md bg-base-200"
       id="email"
       name="email"
       type="email"
       placeholder="Ihre E-Mail-Adresse"
       required
     />
-    <button class="btn-primary w-full max-w-[12rem]" type="submit">
+    <button class="btn btn-primary rounded-full w-full max-w-[12rem]" type="submit">
       Jetzt vormerken
     </button>
   </form>
-  <p class="text-center text-sm text-slate/70">
+  <p class="text-center text-sm text-neutral/70">
     Wir versprechen: keine Spam-Flut. Sie erhalten nur relevante Updates rund um Ruhestarter und den Ruhestands-Kompass.
   </p>
 </section>

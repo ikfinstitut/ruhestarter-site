@@ -6,18 +6,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1F5B87',
-        accent: '#F6C343',
-        background: '#F8F4EE',
-        text: '#3A3A3A',
-        seagreen: '#3C8D7C',
         // Legacy color aliases for backward compatibility
-        // Both petrol and marine map to primary as they were used interchangeably for brand blue
         petrol: '#1F5B87',
         sand: '#F8F4EE',
         marine: '#1F5B87',
         slate: '#3A3A3A',
-        ocean: '#3C8D7C'
+        ocean: '#3C8D7C',
+        seagreen: '#3C8D7C'
       },
       fontFamily: {
         sans: ['"Work Sans"', ...fontFamily.sans],
@@ -28,5 +23,24 @@ export default {
       }
     }
   },
-  plugins: []
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        ruhestarter: {
+          'primary': '#1F5B87',        // Kompass-Blau
+          'secondary': '#F6C343',      // Ruhestarter-Gelb
+          'accent': '#3C8D7C',         // Seegrün
+          'neutral': '#3A3A3A',        // Graphit-Grau
+          'base-100': '#F8F4EE',       // Sand-Beige
+          'base-200': '#FFFFFF',       // White
+          'base-300': '#E8E4DE',       // Slightly darker sand
+          'info': '#1F5B87',
+          'success': '#3C8D7C',
+          'warning': '#F6C343',
+          'error': '#EF4444',
+        },
+      },
+    ],
+  },
 };

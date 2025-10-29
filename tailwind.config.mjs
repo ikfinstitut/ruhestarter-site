@@ -28,12 +28,17 @@ export default {
       {
         ruhestarter: {
           'primary': '#1F5B87',        // Kompass-Blau
+          'primary-content': '#FFFFFF', // White text on primary buttons
           'secondary': '#F6C343',      // Ruhestarter-Gelb
+          'secondary-content': '#3A3A3A', // Dark text on secondary buttons
           'accent': '#3C8D7C',         // Seegrün
+          'accent-content': '#FFFFFF', // White text on accent
           'neutral': '#3A3A3A',        // Graphit-Grau
+          'neutral-content': '#FFFFFF', // White text on neutral
           'base-100': '#F8F4EE',       // Sand-Beige
           'base-200': '#FFFFFF',       // White
           'base-300': '#E8E4DE',       // Slightly darker sand
+          'base-content': '#3A3A3A',   // Text color on base
           'info': '#1F5B87',
           'success': '#3C8D7C',
           'warning': '#F6C343',

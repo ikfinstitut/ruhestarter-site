@@ -38,6 +38,10 @@ The brand conveys **Klarheit – Zuversicht – Bewegung** with nautical/compass
 
 ## Development Workflow
 
+- **Node.js 20** with **PNPM 9** for package management
+- **TailwindCSS** for utility-first styling
+- **Astro** framework for static site generation
+
 ### Essential Commands
 ```bash
 pnpm dev          # Development server at localhost:4321
@@ -59,7 +63,7 @@ pnpm preview      # Test production build locally
 - Builds with Node 20 + PNPM 9, deploys `dist/*` via SCP
 
 ### External Dependencies
-- **Formspree** for newsletter signup (no backend needed)
+- **Beehiiv** for newsletter signup 
 - **Google Fonts** for Work Sans + DM Serif Display (preconnected in BaseLayout)
 - **Static hosting** optimized for Nginx serving
 

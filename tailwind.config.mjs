@@ -11,8 +11,7 @@ export default {
         sand: '#F8F4EE',
         marine: '#1F5B87',
         slate: '#3A3A3A',
-        ocean: '#3C8D7C',
-        seagreen: '#3C8D7C'
+        ocean: '#3C8D7C'
       },
       fontFamily: {
         sans: ['"Work Sans"', ...fontFamily.sans],

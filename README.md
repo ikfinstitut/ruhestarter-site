@@ -57,20 +57,20 @@ Eine moderne, kommentierte Astro-Landingpage mit TailwindCSS für das Projekt **
    ```
 
 ## Newsletter-Integration anpassen
-- Öffnen Sie `src/components/NewsletterForm.astro`.
-- Ersetzen Sie den Platzhalter in `action="https://formspree.io/f/mzblllaq"` durch Ihren Formspree- oder Beehiiv-Endpunkt.
-- Bei Beehiiv nutzen Sie das eingebettete Formular und passen Markup/Styles entsprechend an.
+- Öffne `src/components/NewsletterForm.astro`.
+- Ersetze den Platzhalter in `action="https://formspree.io/f/mzblllaq"` durch deinen Formspree- oder Beehiiv-Endpunkt.
+- Bei Beehiiv nutze das eingebettete Formular und passe Markup/Styles entsprechend an.
 
 ## Deployment zu Hetzner
-1. Hinterlegen Sie folgende Secrets im GitHub-Repository:
+1. Hinterlege folgende Secrets im GitHub-Repository:
    - `HETZNER_HOST` – Serveradresse oder IP
    - `HETZNER_USER` – SSH-Benutzer:in
    - `HETZNER_PORT` – SSH-Port (z. B. `22`)
    - `HETZNER_TARGET` – Zielpfad auf dem Server (z. B. `/var/www/ruhestarter`)
    - `HETZNER_SSH_KEY` – Privater SSH-Schlüssel im PEM-Format
-2. Pushen Sie auf den Branch `main` oder starten Sie den Workflow manuell unter **Actions → Build and Deploy**.
+2. Pushe auf den Branch `main` oder starte den Workflow manuell unter **Actions → Build and Deploy**.
 3. Der Workflow führt `pnpm build` aus und überträgt den Inhalt des `dist/`-Ordners via `scp` an das Ziel.
-4. Stellen Sie sicher, dass Nginx den Zielordner als Root verwendet und statische Dateien korrekt ausliefert.
+4. Stelle sicher, dass Nginx den Zielordner als Root verwendet und statische Dateien korrekt ausliefert.
 
 ## Nützliche Anpassungspunkte
 - **Farben & Fonts:** `tailwind.config.mjs`

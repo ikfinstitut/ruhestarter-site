@@ -5,14 +5,14 @@
  */
 const {
   action = 'https://formspree.io/f/mzblllaq',
-  headline = 'Bleiben Sie informiert',
-  description = 'Erhalten Sie Einladungen zur Beta, Experten-Insights und Updates zum Launch der Ruhestarter Plattform.'
+  headline = 'Bleiben Sie am Puls der Ruhestandsplanung',
+  description = 'Erhalten Sie frühzeitigen Beta-Zugang, Experten-Insights und Updates zur Ruhestarter Plattform – ohne Spam, nur relevante Informationen.'
 } = Astro.props;
 ---
-<section id="newsletter" class="container mx-auto flex w-full max-w-6xl flex-col items-center gap-10 rounded-[3rem] border border-primary/10 bg-base-200/80 px-6 py-16 shadow-card backdrop-blur sm:px-10 lg:px-0">
-  <header class="flex flex-col gap-4 text-center">
+<section id="newsletter" class="container mx-auto flex w-full max-w-6xl flex-col items-center gap-10 rounded-[3rem] border border-primary/10 bg-base-200/80 px-6 py-16 shadow-card backdrop-blur sm:px-10 lg:px-20">
+  <header class="flex flex-col gap-5 text-center">
     <h2 class="text-3xl font-display text-primary sm:text-4xl">{headline}</h2>
-    <p class="text-lg text-neutral/80 sm:text-xl">{description}</p>
+    <p class="text-lg text-neutral/80 sm:text-xl max-w-2xl mx-auto">{description}</p>
   </header>
   <form
     class="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center"
@@ -21,18 +21,19 @@ const {
   >
     <label class="sr-only" for="email">E-Mail-Adresse</label>
     <input
-      class="input input-bordered input-primary w-full max-w-md bg-base-200"
+      class="input input-bordered input-primary w-full max-w-md bg-base-200 text-base focus:outline-offset-2 focus:outline-primary/50 transition-all"
       id="email"
       name="email"
       type="email"
       placeholder="Ihre E-Mail-Adresse"
       required
+      aria-describedby="email-help"
     />
-    <button class="btn btn-primary rounded-full w-full max-w-[12rem]" type="submit">
+    <button class="btn btn-primary rounded-full w-full max-w-[14rem] text-base shadow-[0_2px_8px_rgba(31,91,135,0.2)] hover:shadow-[0_4px_12px_rgba(31,91,135,0.3)] transition-shadow" type="submit">
       Jetzt vormerken
     </button>
   </form>
-  <p class="text-center text-sm text-neutral/70">
+  <p id="email-help" class="text-center text-sm text-neutral/70 max-w-xl">
     Wir versprechen: keine Spam-Flut. Sie erhalten nur relevante Updates rund um Ruhestarter und den Ruhestands-Kompass.
   </p>
 </section>

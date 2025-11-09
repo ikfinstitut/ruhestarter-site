@@ -43,11 +43,4 @@
   }
   
   /* Größere Schrift für wichtige Texte */
-  .text-lg {
-    font-size: var(--font-size-lg) !important;
-  }
-  
-  .text-xl {
-    font-size: var(--font-size-xl) !important;
-  }
 }

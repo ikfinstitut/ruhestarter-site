@@ -5,14 +5,6 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
-      colors: {
-        // Legacy color aliases for backward compatibility
-        petrol: '#1F5B87',
-        sand: '#F8F4EE',
-        marine: '#1F5B87',
-        slate: '#3A3A3A',
-        ocean: '#3C8D7C'
-      },
       fontFamily: {
         sans: ['"Work Sans"', ...fontFamily.sans],
         display: ['"DM Serif Display"', ...fontFamily.serif]

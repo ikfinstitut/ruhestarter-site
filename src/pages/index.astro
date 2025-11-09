@@ -37,57 +37,63 @@ const milestones = [
 
   <WhatWhy />
 
-  <section class="section gap-12">
-    <header class="section-header">
-      <h2 class="section-title">Wie Ruhestarter Sie begleitet</h2>
-      <p class="section-subtitle">
+  <section class="container mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-16 sm:px-10 lg:px-0">
+    <header class="flex flex-col gap-4 text-center">
+      <h2 class="text-3xl font-display text-primary sm:text-4xl">Wie Ruhestarter Sie begleitet</h2>
+      <p class="text-lg text-neutral/80 sm:text-xl">
         Vom ersten Überblick bis zur laufenden Optimierung: Wir kombinieren moderne Technologie mit menschlicher Beratungskompetenz.
       </p>
     </header>
     <div class="grid gap-6 lg:grid-cols-3">
       {milestones.map((step) => (
-        <article class="flex h-full flex-col justify-between gap-6 rounded-3xl border border-petrol/10 bg-white/80 p-8 shadow-card backdrop-blur">
-          <div class="flex flex-col gap-4">
-            <h3 class="text-xl font-semibold text-marine">{step.title}</h3>
-            <p class="text-base text-slate/80">{step.description}</p>
+        <article class="card bg-base-200/80 shadow-card backdrop-blur border border-primary/10 h-full">
+          <div class="card-body flex flex-col justify-between">
+            <div class="flex flex-col gap-4">
+              <h3 class="card-title text-primary">{step.title}</h3>
+              <p class="text-base text-neutral/80">{step.description}</p>
+            </div>
+            <div class="badge badge-primary badge-outline uppercase tracking-[0.25em]">
+              {step.status}
+            </div>
           </div>
-          <span class="inline-flex items-center justify-center rounded-full bg-petrol/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-petrol">
-            {step.status}
-          </span>
         </article>
       ))}
     </div>
   </section>
 
-  <section class="section gap-12">
-    <header class="section-header">
-      <h2 class="section-title">Für wen wir entwickeln</h2>
-      <p class="section-subtitle">
+  <section class="container mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-16 sm:px-10 lg:px-0">
+    <header class="flex flex-col gap-4 text-center">
+      <h2 class="text-3xl font-display text-primary sm:text-4xl">Für wen wir entwickeln</h2>
+      <p class="text-lg text-neutral/80 sm:text-xl">
         Ruhestarter unterstützt Menschen, die Verantwortung für ihre Zukunft übernehmen wollen – egal ob privat oder professionell.
       </p>
     </header>
     <div class="grid gap-6 lg:grid-cols-2">
-      <article class="flex flex-col gap-4 rounded-3xl border border-petrol/10 bg-white/80 p-8 shadow-card backdrop-blur">
-        <h3 class="text-xl font-semibold text-marine">Privatpersonen mit Gestaltungswillen</h3>
-        <p class="text-base text-slate/80">
-          Sie möchten verstehen, wie Ihre Vorsorge heute steht, welche Optionen morgen möglich sind und wie Sie finanzielle Freiheit erreichen.
-        </p>
-        <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-slate/80">
-          <li>Intuitives Dashboard mit verständlichen KPIs</li>
-          <li>Planung realistischer Ruhestands-Szenarien</li>
-          <li>Hinweise auf Lücken und Optimierungspotenziale</li>
-        </ul>
+      <article class="card bg-base-200/80 shadow-card backdrop-blur border border-primary/10">
+        <div class="card-body">
+          <h3 class="card-title text-primary">Privatpersonen mit Gestaltungswillen</h3>
+          <p class="text-base text-neutral/80">
+            Sie möchten verstehen, wie Ihre Vorsorge heute steht, welche Optionen morgen möglich sind und wie Sie finanzielle Freiheit erreichen.
+          </p>
+          <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-neutral/80">
+            <li>Intuitives Dashboard mit verständlichen KPIs</li>
+            <li>Planung realistischer Ruhestands-Szenarien</li>
+            <li>Hinweise auf Lücken und Optimierungspotenziale</li>
+          </ul>
+        </div>
       </article>
-      <article class="flex flex-col gap-4 rounded-3xl border border-petrol/10 bg-white/80 p-8 shadow-card backdrop-blur">
-        <h3 class="text-xl font-semibold text-marine">Berater:innen & Ruhestands-Profis</h3>
-        <p class="text-base text-slate/80">
-          Unter der Marke „Ruhestands-Kompass“ schaffen wir eine Plattform, die professionelle Betreuung effizienter macht und Mandant:innen begeistert.
-        </p>
-        <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-slate/80">
-          <li>Transparente Dokumentation und sichere Zusammenarbeit</li>
-          <li>Digitale Tools für Workshops und Beratungsprozesse</li>
-          <li>Gemeinsames Qualitätsversprechen für faire Altersvorsorge</li>
-        </ul>
+      <article class="card bg-base-200/80 shadow-card backdrop-blur border border-primary/10">
+        <div class="card-body">
+          <h3 class="card-title text-primary">Berater:innen & Ruhestands-Profis</h3>
+          <p class="text-base text-neutral/80">
+            Unter der Marke „Ruhestands-Kompass" schaffen wir eine Plattform, die professionelle Betreuung effizienter macht und Mandant:innen begeistert.
+          </p>
+          <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-neutral/80">
+            <li>Transparente Dokumentation und sichere Zusammenarbeit</li>
+            <li>Digitale Tools für Workshops und Beratungsprozesse</li>
+            <li>Gemeinsames Qualitätsversprechen für faire Altersvorsorge</li>
+          </ul>
+        </div>
       </article>
     </div>
   </section>

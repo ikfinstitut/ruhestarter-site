@@ -1,12 +1,12 @@
 ---
 /**
  * Newsletter-Formular mit Formspree-Integration.
- * Ersetzen Sie die action-URL durch Ihre eigene Formspree- oder Beehiiv-Endpoint-URL.
+ * Ersetze die action-URL durch deine eigene Formspree- oder Beehiiv-Endpoint-URL.
  */
 const {
   action = 'https://formspree.io/f/mzblllaq',
-  headline = 'Bleiben Sie am Puls der Ruhestandsplanung',
-  description = 'Erhalten Sie frühzeitigen Beta-Zugang, Experten-Insights und Updates zur Ruhestarter Plattform – ohne Spam, nur relevante Informationen.'
+  headline = 'Bleib am Puls der Ruhestandsplanung',
+  description = 'Erhalte frühzeitigen Beta-Zugang, Experten-Insights und Updates zur Ruhestarter Plattform – ohne Spam, nur relevante Informationen.'
 } = Astro.props;
 ---
 <section id="newsletter" class="container mx-auto flex w-full max-w-6xl flex-col items-center gap-10 rounded-[3rem] border border-primary/10 bg-base-200/80 px-6 py-16 shadow-card backdrop-blur sm:px-10 lg:px-20">
@@ -25,7 +25,7 @@ const {
       id="email"
       name="email"
       type="email"
-      placeholder="Ihre E-Mail-Adresse"
+      placeholder="Deine E-Mail-Adresse"
       required
       aria-describedby="email-help"
     />
@@ -34,6 +34,6 @@ const {
     </button>
   </form>
   <p id="email-help" class="text-center text-sm text-neutral/70 max-w-xl">
-    Wir versprechen: keine Spam-Flut. Sie erhalten nur relevante Updates rund um Ruhestarter und den Ruhestands-Kompass.
+    Wir versprechen: keine Spam-Flut. Du erhältst nur relevante Updates rund um Ruhestarter und den Ruhestands-Kompass.
   </p>
 </section>

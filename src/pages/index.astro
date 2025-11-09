@@ -16,19 +16,19 @@ const milestones = [
     title: 'Analyse & Klarheit',
     description:
       'Wir sammeln alle relevanten Daten, bewerten bestehende Verträge und zeigen, wo Handlungsbedarf besteht.',
-    status: 'Live in Q1 2025'
+    status: 'Ab Frühjahr 2026'
   },
   {
     title: 'Digitale Steuerung',
     description:
       'Mit dem Ruhestands-Dashboard behalten Sie Szenarien, Renditen und Liquiditätsflüsse jederzeit im Blick.',
-    status: 'Beta in Q2 2025'
+    status: 'Ab Sommer 2026'
   },
   {
     title: 'Beratung mit Herz',
     description:
       'Sie wählen aus geprüften Expert:innen, die auf Honorarbasis begleiten – unabhängig, transparent, empathisch.',
-    status: 'Netzwerkaufbau 2025'
+    status: 'Netzwerkaufbau 2026'
   }
 ];
 ---
@@ -44,15 +44,15 @@ const milestones = [
         Vom ersten Überblick bis zur laufenden Optimierung: Wir kombinieren moderne Technologie mit menschlicher Beratungskompetenz.
       </p>
     </header>
-    <div class="grid gap-6 lg:grid-cols-3">
+    <div class="grid gap-8 lg:grid-cols-3">
       {milestones.map((step) => (
         <article class="card bg-base-200/80 shadow-card backdrop-blur border border-primary/10 h-full">
-          <div class="card-body flex flex-col justify-between">
+          <div class="card-body flex flex-col justify-between p-6">
             <div class="flex flex-col gap-4">
               <h3 class="card-title text-primary">{step.title}</h3>
               <p class="text-base text-neutral/80">{step.description}</p>
             </div>
-            <div class="badge badge-primary badge-outline uppercase tracking-[0.25em]">
+            <div class="badge badge-primary badge-outline uppercase tracking-[0.25em] mt-4">
               {step.status}
             </div>
           </div>
@@ -68,14 +68,14 @@ const milestones = [
         Ruhestarter unterstützt Menschen, die Verantwortung für ihre Zukunft übernehmen wollen – egal ob privat oder professionell.
       </p>
     </header>
-    <div class="grid gap-6 lg:grid-cols-2">
+    <div class="grid gap-8 lg:grid-cols-2">
       <article class="card bg-base-200/80 shadow-card backdrop-blur border border-primary/10">
-        <div class="card-body">
-          <h3 class="card-title text-primary">Privatpersonen mit Gestaltungswillen</h3>
-          <p class="text-base text-neutral/80">
+        <div class="card-body p-6">
+          <h3 class="card-title text-primary text-xl">Für Menschen, die ihre Zukunft selbst gestalten wollen</h3>
+          <p class="text-base text-neutral/80 mt-3">
             Sie möchten verstehen, wie Ihre Vorsorge heute steht, welche Optionen morgen möglich sind und wie Sie finanzielle Freiheit erreichen.
           </p>
-          <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-neutral/80">
+          <ul class="mt-4 list-inside list-disc space-y-2 text-base text-neutral/80">
             <li>Intuitives Dashboard mit verständlichen KPIs</li>
             <li>Planung realistischer Ruhestands-Szenarien</li>
             <li>Hinweise auf Lücken und Optimierungspotenziale</li>
@@ -83,12 +83,12 @@ const milestones = [
         </div>
       </article>
       <article class="card bg-base-200/80 shadow-card backdrop-blur border border-primary/10">
-        <div class="card-body">
-          <h3 class="card-title text-primary">Berater:innen & Ruhestands-Profis</h3>
-          <p class="text-base text-neutral/80">
+        <div class="card-body p-6">
+          <h3 class="card-title text-primary text-xl">Für Berater:innen, die Klarheit und Effizienz schätzen</h3>
+          <p class="text-base text-neutral/80 mt-3">
             Unter der Marke „Ruhestands-Kompass" schaffen wir eine Plattform, die professionelle Betreuung effizienter macht und Mandant:innen begeistert.
           </p>
-          <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-neutral/80">
+          <ul class="mt-4 list-inside list-disc space-y-2 text-base text-neutral/80">
             <li>Transparente Dokumentation und sichere Zusammenarbeit</li>
             <li>Digitale Tools für Workshops und Beratungsprozesse</li>
             <li>Gemeinsames Qualitätsversprechen für faire Altersvorsorge</li>

@@ -4,4 +4,42 @@
 
 :root {
   color-scheme: light;
+  
+  /* Design Tokens - Farben */
+  --color-primary: oklch(0.45 0.12 247); /* #1F5B87 Kompass-Blau */
+  --color-secondary: oklch(0.80 0.14 85); /* #F6C343 Ruhestarter-Gelb */
+  --color-accent: oklch(0.58 0.12 175); /* #3C8D7C Seegrün */
+  --color-neutral: oklch(0.30 0.01 285); /* #3A3A3A Graphit-Grau */
+  --color-base: oklch(0.96 0.01 75); /* #F8F4EE Sand-Beige */
+  
+  /* Design Tokens - Typografie */
+  --font-size-base: 17px;
+  --line-height-base: 1.6;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  
+  /* Design Tokens - Abstände & Radien */
+  --radius-large: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 48px;
+  
+  /* Design Tokens - Schatten */
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 20px 50px -25px rgba(31, 91, 135, 0.35);
+}
+
+@layer base {
+  /* Verbesserte Lesbarkeit für Zielgruppe 50+ */
+  body {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+  
+  p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+  
+  /* Größere Schrift für wichtige Texte */
 }
